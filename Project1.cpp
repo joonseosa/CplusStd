@@ -1,9 +1,7 @@
 #include <iostream>
 using namespace std;
 
-inline int SQ(int x) {
-	return x * x;
-}
+
 
 
 /*
@@ -27,31 +25,16 @@ inline int SQ(int x) {
 */
 
 
-//C++의 inline 함수를 이용했을때
-//define SQ(x) (x) * (x)  삭제 후 inline 함수작성
+// 포인터 요약정리
 
 int main() {
-	/*
-		cout << SQ(8) << '\n';
-	
-		//c의 매크로 함수에서
-		//만약 14의 제곱을 구하고 싶다면?
-		//define SQ(x) (x) * (x) 
-		//cout << SQ(9+5) << '\n';
-
-	*/
 	
 	int a = 5;
-	int* p = &a;   //int형 a의 주소값을  int 포인터p에 저장한다 , &a의 의미는 변수a에 저장된 주소값을 의미한다
-	
-	double d = 3.1;
-	double* ptr = &d;
+	int* p = &a;   //다시 정리해보자면, int형 a의 주소값을 int 포인터p에 저장한다, &a의 의미는 변수a의값 5의 메모리에 저장된 주소값을 의미한다.
 
-	cout << p << '\n';  // 주소값이 출력
-	cout << *p << '\n';  // *p의 의미는 역참조 , 따라서 a에 저장된 5가 출력된다. 
+	cout << p << '\n';  // int a의 주소값이 출력됨 (메모리의 가장 상위주소값 출력)
+	cout << *p << '\n'; // *p의 의미는 역참조의 의미이기때문에, a의 값인 5가 출력됨
 	
-	cout << ptr << '\n'; 
-	cout << *ptr << '\n'; 
 
 	
 	return 0;
