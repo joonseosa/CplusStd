@@ -38,6 +38,7 @@ int main() {
 		//만약 14의 제곱을 구하고 싶다면?
 		//define SQ(x) (x) * (x) 
 		//cout << SQ(9+5) << '\n';
+
 	*/
 	
 	int a = 5;
