@@ -19,7 +19,7 @@ inline int SQ(int x) {
 	Alt + ↑/↓: 한 줄 올리기, 내리기
 	Alt + 마우스, Alt + Seift + ↑/↓: 열 단위 편집
 
-	포인터 예시
+	포인터 개념정리
 	int a = 10;
 	int* p = &a;   a의 주소를 p라는 변수에 저장하겠다
 	int*은 int형의 주소 = 포인터
