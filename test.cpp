@@ -1,4 +1,6 @@
 #include <iostream>
+#include "test.h"
+
 using std::cout;
 using std::endl;
 
@@ -10,28 +12,6 @@ double ave(double n1, double n2, double n3)
 {
 	return((n1 + n2 + n3) / 3.0);
 }
-
-
-
-/*
-	단축키
-	Ctrl + k + f : 자동 정렬
-	Ctrl + Space, Tab : 자동 완성
-	Ctrl + d : 한 줄 복사
-	Ctrl + k + c : 주석 처리
-	Ctrl + k + u : 주석 해제
-	Ctrl + u : 소문자 변환
-	Ctrl + Seift + u : 대문자 변환
-	Ctrl + Shift + f : 문자 찾기
-	Alt + ↑/↓: 한 줄 올리기, 내리기
-	Alt + 마우스, Alt + Seift + ↑/↓: 열 단위 편집
-
-	포인터 개념정리
-	int a = 10;
-	int* p = &a;   a의 주소를 p라는 변수에 저장하겠다
-	int*은 int형의 주소 = 포인터
-	*p 역참조
-*/
 
 
 /*
@@ -52,6 +32,3 @@ int main()
 
 	return 0;
 }
-
-
-
