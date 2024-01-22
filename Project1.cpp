@@ -3,6 +3,7 @@ using std::cout;
 using std::endl;
 
 
+
 /*
 	단축키 정리
 	Ctrl + k + f : 자동 정렬
@@ -16,7 +17,7 @@ using std::endl;
 	Alt + ↑/↓: 한 줄 올리기, 내리기
 	Alt + 마우스, Alt + Seift + ↑/↓: 열 단위 편집
 
-	포인터 정리
+	포인터 예시
 	int a = 10;
 	int* p = &a;   a의 주소를 p라는 변수에 저장하겠다
 	int*은 int형의 주소 = 포인터
@@ -27,24 +28,31 @@ using std::endl;
 	함수의 오버로딩은 서로 다른 파라미터 리스트를 갖는 함수들을 같은 이름으로 정의하는것을 의미한다.
 	(다른 매개 변수를 가진 같은 이름의 여러 함수를 만들 수 있는 C++의 기능이다.)
 
-	!C의 경우는 서로다른 함수이름을 사용해야한다. C는 함수의 오버로딩 기능을 지원하지 않는다.!
+//C++의 inline 함수를 이용했을때
+//define SQ(x) (x) * (x)  삭제 후 inline 함수작성
 
-	같은 이름의 함수들 중에서 어떤 함수를 실행하는가의 결정은 컴파일러가 한다.
-	만약, 반환 타입이 다른 함수라면 컴파일 할수없다.   , (예) -> double ave(double n1, double n2) ,int ave(double n1, double n2)
+int main() {
+	/*
+		cout << SQ(8) << '\n';
+	
+		//c의 매크로 함수에서
+		//만약 14의 제곱을 구하고 싶다면?
+		//define SQ(x) (x) * (x) 
+		//cout << SQ(9+5) << '\n';
 
+	*/
+	
+	int a = 5;
+	int* p = &a;   //int형 a의 주소값을  int 포인터p에 저장한다 , &a의 의미는 변수a에 저장된 주소값을 의미한다
+	
+	double d = 3.1;
+	double* ptr = &d;
 
-*/
-
-double ave(double n1, double n2)
-{
-	return((n1 + n2) / 2.0);
-}
-double ave(double n1, double n2, double n3)
-{
-	return((n1 + n2 + n3) / 3.0);
-}
-
-
+	cout << p << '\n';  // 주소값이 출력
+	cout << *p << '\n';  // *p의 의미는 역참조 , 따라서 a에 저장된 5가 출력된다. 
+	
+	cout << ptr << '\n'; 
+	cout << *ptr << '\n'; 
 
 int main()
 {
