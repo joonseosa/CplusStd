@@ -1,6 +1,15 @@
 #include <iostream>
-using namespace std;
+using std::cout;
+using std::endl;
 
+double ave(double n1, double n2)
+{
+	return((n1 + n2) / 2.0);
+}
+double ave(double n1, double n2, double n3)
+{
+	return((n1 + n2 + n3) / 3.0);
+}
 
 
 /*
@@ -23,39 +32,18 @@ using namespace std;
 	*p 역참조
 */
 
-/*
-	함수의 오버로딩은 서로 다른 파라미터 리스트를 갖는 함수들을 같은 이름으로 정의하는것을 의미한다.
-	(다른 매개 변수를 가진 같은 이름의 여러 함수를 만들 수 있는 C++의 기능이다.)
-*/
+
+// 포인터 요약정리
+
+int main() {
 	
-/*
-	Call by reference  레퍼런스 전달 호출
-	주소전달 호출이나 , 레퍼런스 전달호출은 값의 주소값이나 별명을 설정해서 전달하므로
-	큰 구조체 값을 파라미터로 전달하는 경우에 사용하면
-	함수의 신속한 실행과 함께 메모리 공간을 절약할수있다.
+	int a = 5;
+	int* p = &a;   //다시 정리해보자면, int형 a의 주소값을 int 포인터p에 저장한다, &a의 의미는 변수a의값 5의 메모리에 저장된 주소값을 의미한다.
 
+	cout << p << '\n';  // int a의 주소값이 출력됨 (메모리의 가장 상위주소값 출력)
+	cout << *p << '\n'; // *p의 의미는 역참조의 의미이기때문에, a의 값인 5가 출력됨
+	
 
-*/
-
-void squareCube(int& s, int& c)
-{	
-	//int& s, int& c는 레퍼런스 파라미터, main함수에서 호출에정
-	s = s * s; //제곱
-	int temp = c * c;
-	c = temp * c; //세제곱
-}
-
-int main()
-{
-	int number, square, cube;
-	cout << "정수입력: ";
-	cin >> number;
-	square = cube = number;
-
-	squareCube(square, cube); //square 가 s , cube가 c
-	cout << number << "의 제곱은 " << square << endl;
-	cout << "세제곱은 " << cube <<"입니다"<< endl;
-
-
+	
 	return 0;
 }
